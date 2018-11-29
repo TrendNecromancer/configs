@@ -1,2 +1,2 @@
 # configs
-My dotfiles
+vim config, i3wm config
