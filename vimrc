@@ -33,6 +33,20 @@ Plugin 'nvie/vim-flake8'
 Plugin 'scrooloose/nerdtree'
 " Polyglot language loader
 Plugin 'sheerun/vim-polyglot'
+" Airlight status bar
+Plugin 'bling/vim-airline'
+" goyo - no distractions
+Plugin 'junegunn/goyo.vim'
+" softpencil for writing
+Plugin 'reedes/vim-pencil'
+" Spellchecker
+Plugin 'reedes/vim-lexical'
+" Vim airline themes
+Plugin 'vim-airline/vim-airline-themes'
+" Easymotion
+Plugin 'easymotion/vim-easymotion'
+" Workspace, autosave, sessions
+Plugin 'thaerkh/vim-workspace'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -83,3 +97,12 @@ set nu
 
 " enable copy paste
 set clipboard=unnamed
+
+" Split mappings
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+let g:lexical#spelllang = ['en_us','en_gb','de']
+
