@@ -47,6 +47,9 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'easymotion/vim-easymotion'
 " Workspace, autosave, sessions
 Plugin 'thaerkh/vim-workspace'
+" Hardware Defined Language
+Plugin 'suoto/vim-hdl'
+
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -78,7 +81,14 @@ au BufNewFile, BufRead *.py
     \ set autoindent
     \ set fileformat=unix
 
+" More indent stuff
+au BufNewFile,BufRead *.js,*.html,*.css,*.vue
+\ set tabstop=2 |
+\ set softtabstop=2 |
+\ set shiftwidth=2
+
 " Flags unnecessary whitespace
+highlight BadWhitespace ctermbg=red guibg=darkred
 au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 
 " Set UTF-8
